@@ -11,24 +11,30 @@
     box-sizing: border-box;
 }
 
-/* Mobile-first responsive design */
-
 body {
     font-family: 'Arial', sans-serif;
 }
 
 .container {
-    flex-direction: column; /* Stack items vertically on small screens */
+    flex-direction: column;
 }
 
 .sidebar {
-    width: 100%; /* Take full width on small screens */
+    width: 100%;
     height: auto;
     min-height: 100vh;
+    background-color: rgb(174, 171, 171);
+    font-family: 'Salsa', cursive;
 }
 
 .sidebar nav {
-    padding: 20px; /* Adjust padding for smaller screens */
+    padding: 20px;
+}
+
+.sidebar nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
 .sidebar nav li {
@@ -36,46 +42,62 @@ body {
     padding: 15px 0;
 }
 
+.sidebar nav li a {
+    text-decoration: none;
+    color: black; /* Corrected typo in color */
+}
+
 .main {
-    width: 100%; /* Take full width on small screens */
+    width: 100%;
     padding: 20px;
 }
 
 .infocontainer {
-    flex-direction: column; /* Stack items vertically on small screens */
-    width: 100%; /* Take full width on small screens */
+    flex-direction: column;
+    width: 100%;
     margin: 20px auto;
 }
 
 .devInfo {
     margin: 20px 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.Hello, .Name, .About {
+    font-family: 'Raleway', sans-serif;
+    margin: 5px 0;
+}
+
+.buttons {
+    margin-top: 15px;
+    display: flex;
+}
+
+.btn {
+    display: inline-block;
+    border: 2px solid #000;
+    border-radius: 10px;
+    padding: 10px 15px;
+    margin-right: 10px;
+    background-color: #3498db;
+    color: #fff;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #2980b9;
 }
 
 .devPic img {
-    width: 100%; /* Take full width on small screens */
+    width: 100%;
     margin-top: 0;
     margin-left: 0;
 }
 
-.contactform {
-    padding: 20px;
-}
-
-.contactform form div input {
-    width: 100%; /* Take full width on small screens */
-}
-
-.project {
-    width: 100%; /* Take full width on small screens */
-    margin: 10px 0;
-}
-
-/* Add more responsive styles as needed */
-
 @media only screen and (min-width: 600px) {
-    /* Add styles for larger screens if necessary */
     .container {
-        flex-direction: row; /* Arrange items in a row on larger screens */
+        flex-direction: row;
     }
 
     .sidebar {
@@ -84,11 +106,11 @@ body {
     }
 
     .main {
-        width: calc(100% - 234px); /* Adjust the main content width on larger screens */
+        width: calc(100% - 234px);
     }
 
     .infocontainer {
-        flex-direction: row; /* Arrange items in a row on larger screens */
+        flex-direction: row;
         width: 80vw;
         margin: 99px auto;
     }
